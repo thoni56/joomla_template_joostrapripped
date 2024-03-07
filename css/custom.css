@@ -1,0 +1,397 @@
+/* Event participants listings are not used so hide action panel */
+#crm-main-content-wrapper > div.crm-actions-ribbon.crm-event-manage-tab-actions-ribbon {
+    height: 0;
+}
+
+#crm-participant-links {
+    display:none;
+}
+
+/* Länkar för att hämta .ics för arrangemang */
+div.action-link a.crm-event-feed-link span.label {
+    color: #d5c9b3;
+}
+
+
+/*
+ These are customisations for www.responsive.se and events.responsive.se
+ they should be unified across the two sites.
+*/
+body {
+    font-size: 16px;
+}
+
+.crm-container {
+    font-size: 18px;
+    overflow-x: scroll;
+}
+
+.crm-container .description {
+  font-size: 16px;
+}
+
+.crm-container .help {
+  font-size: 14px;
+  background: #d5c9b3;
+  border: 2px solid #C4A475;
+}
+
+.crm-container div.label {
+  background: #224068;
+  border: 1px solid grey;
+}
+
+.crm-container table {
+  font-size: 16px;
+  line-height: 125%;
+}
+
+.crm-container tr {
+  font-size: 16px;
+}
+
+#crm-container.crm-public .crm-section, .crm-section {
+  margin-bottom: 6px;
+}
+
+#crm-container.crm-public .label {
+    height: 55px;
+}
+
+#crm-container .crm-fb-tweet-buttons .label {
+  background: 0;
+}
+
+.crm-container h3 {
+  font-size: 18px;
+}
+
+.crm-container a.button.crm-register-button,
+.crm-container button.crm-button {
+    font-size: 18px;
+    background: green;
+    padding: 3px;
+}
+
+#crm-participant-links .search-icon {
+  display: none;
+}
+
+
+div.event_summary-section {
+    font-size: 18px;
+    background: #d5c9b3;
+    padding: 10px;
+}
+
+
+/* CSS for the conference program tracks */
+
+.slot {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), inset 0 -3px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Track colouring */
+
+td.slot, td.slot p, td.slot p a {
+    color: #ffffff;
+    line-height: normal;
+}
+
+td.slot.keynote, td.slot.keynote a  {
+    background: #8aa8a4;
+}
+
+td.slot.keynote a:hover {
+    background: #224068;
+}
+
+td.slot.red-track, td.slot.red-track a {
+  background-color: #980000;
+}
+
+td.slot.red-track a:hover {
+  background-color: #224068;
+}
+
+td.slot.blue-track, td.slot.blue-track a {
+  background-color: #224068;
+}
+
+td.slot.blue-track a:hover {
+  background-color: #c4a475;
+}
+
+td.slot.gold-track, td.slot.gold-track a {
+  background-color: #c4a475;
+}
+
+td.slot.gold-track a:hover {
+  background-color: #980000;
+}
+
+
+
+#crm-content div.label label {
+    white-space: initial;
+    text-align: right;
+}
+
+.crm-container .crm-marker {
+    color: white;
+    font-size: 20px;
+}
+
+
+table.schedule,
+table.schedule tr,
+table.schedule tr td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: grey;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px;
+}
+
+.upcoming_event_title, .event_date, .block-number {
+  line-height:15px;
+}
+
+.previous a:before {
+  font-family: FontAwesome;
+  content: "\f053";
+}
+
+.next a:after {
+  font-family: FontAwesome;
+  content: "\f054";
+}
+
+a {
+    color: #C4A475;
+}
+
+
+#menu ul.nav.menu.navbar-nav li a {
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+}
+#menu ul.nav.menu.navbar-nav li a:hover {
+    color: black;
+}
+
+#menu div.container div.navbar-collapse {
+    padding-top: 30px;
+}
+
+#menu ul.nav.menu-nav.navbar-nav li {
+    color: white;
+}
+#menu ul.nav.menu-nav.navbar-nav li.dropdown.dropdown-submenu a {
+    color: black;
+}
+#menu ul.nav.menu-nav.navbar-nav li.dropdown ul.dropdown-menu li a {
+    color: black;
+}
+#menu ul.nav.menu-nav.navbar-nav li.divider span.separator {
+    font-weight: 200;
+}
+#menu ul.nav.menu-nav.navbar-nav li.dropdown-submenu span.nav-header {
+    color: black;
+    font-size: 14px;
+    padding: 3px 20px;
+    font-weight: 200;
+}
+#menu ul.nav.menu-nav.navbar-nav li.active {
+    color: white;
+    background: grey;
+}
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    background-color: #c4a475;
+    color: #FFFFFF;
+}
+#menu ul.nav.menu-nav.navbar-nav li a {
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+}
+#menu ul.nav.menu-nav.navbar-nav li a:hover {
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+}
+
+ul.civieventlist {
+    list-style: none;
+}
+
+li {
+    list-style-position: inside;
+}
+
+.slider {
+    padding:0;
+}
+
+ul.latestnews {
+  list-style: disc;
+}
+
+ul.latestnews li {
+  list-style-position: outside;
+}
+
+.tänkvärt {
+  text-align: right;
+}
+.tänkvärt p {
+  line-height: 1.1em;
+  font-size: 14px;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+.tänkvärt address {
+  font-style: italic;
+  line-height: 1.1em;
+  font-size: 14px;
+}
+div.tänkvärt {
+  margin: 0;
+  padding: 0 25px 0 0;
+}
+#system-message-container {
+    margin: 10px;
+    padding: 0px 15px;
+}
+
+
+/* Styling the bottom info */
+#bottom span.info_name a {
+  font-size: 20px;
+}
+
+#bottom a {
+  color:#CFA46C;
+}
+
+#bottom p a {
+  color:#CFA46C;
+}
+
+#bottom a:hover {
+  color:#224068;
+}
+
+#bottom p a:hover {
+  color:#224068;
+}
+
+
+#bottom span.countdown_row p {
+  margin-left: 10px;
+  text-align: left;
+}
+
+#bottom span.countdown_row a {
+  color: #CFA46C;
+}
+#bottom span.countdown_row a:hover {
+  color: #224068; /* dark blue */
+}
+
+#bottom2 ul.nav.menu li a {
+    padding: 0;
+}
+
+
+.button {
+  padding: 2px 8px;
+  margin-left: 2px;
+  border-radius: 5px;
+}
+
+ul.pagenav {
+    margin: 0;
+    padding: 0;
+}
+li.pagenav-prev, li.pagenav-next {
+  list-style: none;
+  background: #f0f0f0;
+  border-radius:8px;
+  padding: 2px 5px;
+}
+li.pagenav-prev:hover, li.pagenav-next:hover {
+  background: #CFA46C; /* Gold */
+  color: #224068; /* dark blue */
+}
+li.pagenav-prev a:hover,
+li.pagenav-next a:hover {
+  color: #224068; /* dark blue */
+}
+li.pagenav-prev {
+  float:left;
+}
+li.pagenav-next {
+  float:right;
+}
+
+dl.fields-container dd.field-entry span.field-label {
+    vertical-align: top;
+}
+
+/* Show text on mobile devices */
+@media only screen and (max-width: 768px) {
+    .sequence .container .text-block.bottom {
+        display: inherit;
+        padding: 12px 48px;
+        bottom: 0px;
+    }
+
+    .sequence .container .text-block.bottom .readmore {
+        display:none;
+    }
+}
+
+p img {
+    margin: 3px;
+}
+
+/* Custom style for "date-stamp" dates */
+.date-stamp {
+	width: 40px; height: 40px; 
+	background: #fcfcfc; 
+	background: linear-gradient(top, #fcfcfc 0%,#dad8d8 100%); 
+	background: -moz-linear-gradient(top, #fcfcfc 0%, #dad8d8 100%); 
+	background: -webkit-linear-gradient(top, #fcfcfc 0%,#dad8d8 100%); 
+	border: 1px solid #d2d2d2;
+	border-radius: 4px;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+	float: left;
+	margin-right: 12px;
+	margin-bottom: 5px;
+}
+
+.date-stamp p {
+	font-family: Helvetica, sans-serif; 
+	font-size: 20px; text-align: center; color: #9e9e9e; 
+	padding-top: 2px;
+	margin-top: 1px;
+	line-height: 20px;
+}
+
+.date-stamp p span {
+	background: #d10000; 
+	background: linear-gradient(top, #d10000 0%, #7a0909 100%);
+	background: -moz-linear-gradient(top, #d10000 0%, #7a0909 100%);
+	background: -webkit-linear-gradient(top, #d10000 0%, #7a0909 100%);
+	font-size: 10px; font-weight: bold; color: #fff; text-transform: uppercase; 	
+	display: block;
+	border-top: 3px solid #a13838;
+	border-radius: 0 0 4px 4px;
+	padding: 2px 0 2px 0;
+	line-height: 14px;
+}
