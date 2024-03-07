@@ -9,11 +9,11 @@
 
 defined('_JEXEC') or die;
 
-JHtml::_('bootstrap.tooltip');
+use Joomla\CMS\Factory;
 
 $class  = ' class="first"';
-$lang   = JFactory::getLanguage();
-$user   = JFactory::getUser();
+$lang   = Factory::getLanguage();
+$user   = Factory::getUser();
 $groups = $user->getAuthorisedViewLevels();
 
 if ($this->maxLevel != 0 && count($this->children[$this->category->id]) > 0) : ?>

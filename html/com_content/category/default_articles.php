@@ -59,7 +59,7 @@ $tableClass = $this->params->get('show_headings') != 1 ? ' table-noheader' : '';
                         <?php echo JHtml::_('select.options', JHtml::_('tag.options', true, true), 'value', 'text', $this->state->get('filter.tag')); ?>
                     </select>
                 <?php endif; ?>
-</div>
+            </div>
         <?php endif; ?>
         <?php if ($this->params->get('show_pagination_limit')) : ?>
             <div class="btn-group pull-right">

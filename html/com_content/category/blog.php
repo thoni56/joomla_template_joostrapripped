@@ -73,12 +73,12 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 
     <?php if (!empty($this->intro_items)) : ?>
     <?php foreach ($this->intro_items as $key => &$item) : ?>
-        <?php $rowcount = ((int) $key % (int) $this->columns) + 1; ?>
+        <?php $rowcount = ((int) $key % (int) $this->params->get('num_columns')) + 1; ?>
         <?php if ($rowcount == 1) : ?>
-            <?php $row = $counter / $this->columns; ?>
-        <div class="items-row cols-<?php echo (int) $this->columns;?> <?php echo 'row-'.$row; ?> row-fluid clearfix">
+            <?php $row = $counter / $this->params->get('num_columns'); ?>
+        <div class="items-row cols-<?php echo (int) $this->params->get('num_columns');?> <?php echo 'row-'.$row; ?> row-fluid clearfix">
         <?php endif; ?>
-            <div class="col-md-<?php echo round((12 / $this->columns));?> col-sm-<?php echo round((12 / $this->columns));?>">
+            <div class="col-md-<?php echo round((12 / $this->params->get('num_columns')));?> col-sm-<?php echo round((12 / $this->params->get('num_columns')));?>">
                 <div class="item column-<?php echo $rowcount;?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
                     itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
                     <?php
@@ -89,7 +89,7 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
                 </div><!-- end item -->
                 <?php $counter++; ?>
             </div><!-- end span -->
-            <?php if (($rowcount == $this->columns) or ($counter == $introcount)) : ?>
+            <?php if (($rowcount == $this->params->get('num_columns')) or ($counter == $introcount)) : ?>
         </div><!-- end row -->
             <?php endif; ?>
     <?php endforeach; ?>
@@ -111,7 +111,7 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
     <?php endif; ?>
         <?php echo $this->loadTemplate('children'); ?> </div>
     <?php endif; ?>
-    <?php if (($this->params->def('show_pagination', 1) == 1  || ($this->params->get('show_pagination') == 2)) && ($this->pagination->get('pages.total') > 1)) : ?>
+    <?php if (($this->params->def('show_pagination', 1) == 1  || ($this->params->get('show_pagination') == 2)) && ($this->pagination->pagesTotal > 1)) : ?>
     <div class="pagination hidden-xs">
         <?php  if ($this->params->def('show_pagination_results', 1)) : ?>
         <p class="counter pull-right"> <?php echo $this->pagination->getPagesCounter(); ?> </p>

@@ -9,6 +9,9 @@
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Factory;
+use Joomla\CMS\Date\Date;
+
 // Create a shortcut for params.
 $params = $this->item->params;
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
@@ -19,8 +22,8 @@ $info    = $params->get('info_block_position', 0);
 $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associations'));
 
 ?>
-<?php if ($this->item->state == 0 || ($this->item->publish_up && strtotime($this->item->publish_up) > strtotime(JFactory::getDate()))
-	|| ($this->item->publish_up && (strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != JFactory::getDbo()->getNullDate())) : ?>
+<?php if ($this->item->state == 0 || ($this->item->publish_up && strtotime($this->item->publish_up) > strtotime(new Date()))
+	|| ($this->item->publish_down && (strtotime($this->item->publish_down) < strtotime(new Date())) && $this->item->publish_down != Factory::getDbo()->getNullDate())) : ?>
 	<div class="system-unpublished">
 <?php endif; ?>
 
@@ -68,7 +71,7 @@ $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associat
 	if ($params->get('access-view')) :
 		$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
 	else :
-		$menu = JFactory::getApplication()->getMenu();
+		$menu = Factory::getApplication()->getMenu();
 		$active = $menu->getActive();
 		$itemId = $active->id;
 		$link = new JUri(JRoute::_('index.php?option=com_users&view=login&Itemid=' . $itemId, false));
@@ -79,8 +82,8 @@ $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associat
 
 <?php endif; ?>
 
-<?php if ($this->item->state == 0 || ($this->item->publish_up && strtotime($this->item->publish_up) > strtotime(JFactory::getDate()))
-	|| ($this->item->publish_down && (strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != JFactory::getDbo()->getNullDate())) : ?>
+<?php if ($this->item->state == 0 || ($this->item->publish_up && strtotime($this->item->publish_up) > strtotime(Factory::getDate()))
+	|| ($this->item->publish_down && (strtotime($this->item->publish_down) < strtotime(Factory::getDate())) && $this->item->publish_down != Factory::getDbo()->getNullDate())) : ?>
 </div>
 <?php endif; ?>
 

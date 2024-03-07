@@ -9,10 +9,10 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 $info = $this->item->params->get('info_block_position', 0);
 
 // columns
-if (is_null($this->columns))
+if (is_null($this->params->get('num_columns')))
 	$item_span = 12;
 else
-	$item_span = round((12 / $this->columns));
+	$item_span = round((12 / $this->params->get('num_columns')));
 
 // cateogry class
 $cateogry_title = $this->escape($this->item->category_title);
@@ -127,8 +127,8 @@ $category_class = str_replace(' ', '', $cateogry_title);
 			<?php if ($params->get('show_category')) : ?>
 				<dd class="category-name">
 						<?php 	$title = $this->escape($this->item->category_title);
-						$url = '<a href="' . JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->catslug)) . '">' . $title . '</a>';?>
-						<?php if ($params->get('link_category') && $this->item->catslug) : ?>
+						$url = '<a href="' . JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->params->get('catslug'))) . '">' . $title . '</a>';?>
+						<?php if ($params->get('link_category') && $this->item->params->get('catslug')) : ?>
 							<?php echo JText::sprintf('COM_CONTENT_CATEGORY', $url); ?>
 						<?php else : ?>
 							<?php echo JText::sprintf('COM_CONTENT_CATEGORY', $title); ?>
