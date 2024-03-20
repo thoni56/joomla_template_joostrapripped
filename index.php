@@ -71,9 +71,7 @@ $doc->addStyleSheet($this->baseurl.'/media/jui/css/icomoon.css');
 		<?php if (@filesize('templates/' . $this->template . '/js/analytics-head.js') > 5): ?>
 			   <?php include_once('templates/' . $this->template . '/js/analytics-head.js'); ?>
 		<?php endif; ?>
-
-		<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,200,500' rel='stylesheet' type='text/css'>
-		
+		<link href='https://fonts.googleapis.com/css?family=Raleway:200,300,400,500' rel='stylesheet' type='text/css'>
 	</head>
     <body class="<?php echo $bodyclass. " " .$parentName. " " .$active->alias. " " .$option. " view-" .$view. " " .$frontpage. " itemid-" .$itemid. " " .$loggedin. " " .$rtl_detection; ?>">	<div class="body-wrapper" id="page">
 		<header id="header">
