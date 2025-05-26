@@ -98,28 +98,28 @@ $category_class = str_replace(' ', '', $cateogry_title);
 			
 			<?php if ($params->get('show_publish_date')) : ?>
 				<dd  class="published">
-					<span class="icon-time"></span>
+					<span class="bi bi-clock"></span>
 					<?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE_ON', JHtml::_('date', $this->item->publish_up, JText::_('DATE_FORMAT_LC3'))); ?>
 				</dd>
 			<?php endif; ?>
 
 			<?php if ($params->get('show_create_date')) : ?>
 				<dd class="create">
-					<span class="icon-calendar"></span>
+					<span class="bi bi-calendar"></span>
 					<?php echo JText::sprintf('COM_CONTENT_CREATED_DATE_ON', JHtml::_('date', $this->item->modified, JText::_('DATE_FORMAT_LC3'))); ?>
 				</dd>
 			<?php endif; ?>
 		
 			<?php if ($params->get('show_modify_date')) : ?>
 				<dd class="modified">
-					<span class="icon-calendar"></span>
+					<span class="bi bi-calendar"></span>
 					<?php echo JText::sprintf('COM_CONTENT_LAST_UPDATED', JHtml::_('date', $this->item->modified, JText::_('DATE_FORMAT_LC3'))); ?>
 				</dd>
 			<?php endif; ?>
 		
 			<?php if ($params->get('show_hits')) : ?>
 				<dd  class="hits">
-					<span class="icon-eye-open"></span>
+					<span class="bi bi-eye"></span>
 					<?php echo JText::sprintf('COM_CONTENT_ARTICLE_HITS', $this->item->hits); ?>
 				</dd>
 			<?php endif; ?>

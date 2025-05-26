@@ -37,6 +37,7 @@ $doc->addStyleSheet($this->baseurl.'/media/jui/css/icomoon.css');
         <?php elseif ($loadBootstrap == 2) : ?>
             <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
         <?php endif; ?>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
         <!--[if lt IE 9]>
         <script src="<?php echo $tplUrl; ?>/js/html5shiv.js" type="text/javascript"></script>
         <script src="<?php echo $tplUrl; ?>/js/respond.min.js" type="text/javascript"></script>
@@ -76,17 +77,13 @@ $doc->addStyleSheet($this->baseurl.'/media/jui/css/icomoon.css');
     </head>
     <body class="<?php echo $bodyclass. " " .$parentName. " " .$active->alias. " " .$option. " view-" .$view. " " .$frontpage. " itemid-" .$itemid. " " .$loggedin. " " .$rtl_detection; ?>">	<div class="body-wrapper" id="page">
         <header id="header">
-            <div class="container">
-                <div class="logo pull-left">
+            <div class="container d-flex justify-content-between align-items-center">
+                <?php if ($this->countModules('menu')): ?>
+                <div class="logo">
                     <?php echo $logo; ?>
                 </div>
-                <?php if ($this->countModules('menu')): ?>
-                    <nav id="menu" class="clearfix hidden-xs">
-                        <div class="container">
-                            <div class="navbar-collapse collapse">
-                                <jdoc:include type="modules" name="menu" style="basic" />
-                            </div>
-                        </div>
+                    <nav id="menu">
+                         <jdoc:include type="modules" name="menu" style="none" />
                     </nav>
                 <?php endif; ?>
                 <a href="#sidebar">

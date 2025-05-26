@@ -912,7 +912,7 @@ abstract class JHtml
 			}
 			return '<div class="input-append"><input type="text" title="' . (0 !== (int) $value ? self::_('date', $value, null, null) : '')
 				. '" name="' . $name . '" id="' . $id . '" value="' . htmlspecialchars($value, ENT_COMPAT, 'UTF-8') . '" ' . $attribs . ' />'
-				. '<button class="btn btn-default" id="' . $id . '_img"><span class="glyphicon glyphicon-calendar"></span></button></div>';
+				. '<button class="btn btn-default" id="' . $id . '_img"><span class="glyphicon glyphbi bi-calendar"></span></button></div>';
 
 		}
 		else

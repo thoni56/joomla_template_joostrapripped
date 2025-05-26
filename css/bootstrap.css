@@ -2436,7 +2436,7 @@ input[type="button"].btn-block {
   content: "\e002";
 }
 
-.glyphicon-search:before {
+.glyphbi bi-search:before {
   content: "\e003";
 }
 
@@ -2476,7 +2476,7 @@ input[type="button"].btn-block {
   content: "\e013";
 }
 
-.glyphicon-remove:before {
+.glyphbi bi-x:before {
   content: "\e014";
 }
 
@@ -2512,7 +2512,7 @@ input[type="button"].btn-block {
   content: "\e022";
 }
 
-.glyphicon-time:before {
+.glyphbi bi-clock:before {
   content: "\e023";
 }
 
@@ -2664,7 +2664,7 @@ input[type="button"].btn-block {
   content: "\e064";
 }
 
-.glyphicon-edit:before {
+.glyphbi bi-pencil:before {
   content: "\e065";
 }
 
@@ -2728,7 +2728,7 @@ input[type="button"].btn-block {
   content: "\e080";
 }
 
-.glyphicon-plus-sign:before {
+.glyphbi bi-plus:before {
   content: "\e081";
 }
 
@@ -2736,7 +2736,7 @@ input[type="button"].btn-block {
   content: "\e082";
 }
 
-.glyphicon-remove-sign:before {
+.glyphbi bi-x-sign:before {
   content: "\e083";
 }
 
@@ -2748,7 +2748,7 @@ input[type="button"].btn-block {
   content: "\e085";
 }
 
-.glyphicon-info-sign:before {
+.glyphbi bi-info-circle:before {
   content: "\e086";
 }
 
@@ -2756,11 +2756,11 @@ input[type="button"].btn-block {
   content: "\e087";
 }
 
-.glyphicon-remove-circle:before {
+.glyphbi bi-x-circle:before {
   content: "\e088";
 }
 
-.glyphicon-ok-circle:before {
+.glyphbi bi-check-circle:before {
   content: "\e089";
 }
 
@@ -2808,7 +2808,7 @@ input[type="button"].btn-block {
   content: "\e103";
 }
 
-.glyphicon-eye-open:before {
+.glyphbi bi-eye:before {
   content: "\e105";
 }
 
@@ -3164,7 +3164,7 @@ input[type="button"].btn-block {
   content: "\1f4bc";
 }
 
-.glyphicon-calendar:before {
+.glyphbi bi-calendar:before {
   content: "\1f4c5";
 }
 

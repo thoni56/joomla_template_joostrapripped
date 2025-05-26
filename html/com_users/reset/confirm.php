@@ -24,7 +24,7 @@ JHtml::_('behavior.formvalidation');
 		<?php foreach ($this->form->getFieldsets() as $fieldset) : ?>
 		<fieldset>
 			<p class="alert alert-info">
-				<span class="glyphicon glyphicon-info-sign"></span>
+				<span class="glyphicon glyphbi bi-info-circle"></span>
 				<?php echo JText::_($fieldset->label); ?>
 			</p>
 			<?php foreach ($this->form->getFieldset($fieldset->name) as $name => $field) : ?>

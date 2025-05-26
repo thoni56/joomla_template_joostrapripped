@@ -853,12 +853,12 @@ dl.article-info-bottom dd {
 	margin: 0 10px 0 0;
 }
 
-dd span.icon-calendar {
+dd span.bi bi-calendar {
 	display: none;
 }
 
-dd span.icon-eye-open,
-dd span.icon-time {
+dd span.bi bi-eye,
+dd span.bi bi-clock {
 	position: relative;
 	margin-top: -1px;
 	opacity: 0.8;
@@ -1172,7 +1172,7 @@ p.readmore a {
 
 dl.contact-address { display: none; }
 
-.contact-form span.icon-ok-circle {
+.contact-form span.bi bi-check-circle {
 	position: relative;
 	margin-top: -1px;
 	padding-right: 5px;
@@ -1286,7 +1286,7 @@ dl.contact-address { display: none; }
 	padding-right: 15px;
 }
 
-#login-form span.icon-plus-sign {
+#login-form span.bi bi-plus {
 	visibility: hidden;
 }
 
@@ -1420,7 +1420,7 @@ ul.mostread li a:hover {
 }
 
 .add-on .tip,
-.icon-edit.tip,
+.bi bi-pencil.tip,
 .badge.badge-info.tip {
 	background-color: transparent;
 	border: 0;
@@ -2429,9 +2429,9 @@ div.joostrap.btn-group {
 }
 
 /*replacement for calendar icon in frontend
-edit 'glyphicon glyphicon-calendar'
+edit 'glyphicon glyphbi bi-calendar'
 -----------------------------------------*/
-i.icon-calendar:before {
+i.bi bi-calendar:before {
 	content: "\1f4c5";
 	display: inline-block;
   font-family: 'Glyphicons Halflings';
