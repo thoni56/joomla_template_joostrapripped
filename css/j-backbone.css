@@ -114,11 +114,16 @@ ul li.dropdown-submenu .caret {
 	padding: 15px;
 	line-height:20px;
 }
-.navbar-toggle .icon-bar{
-	background-color: darkgray;
-}
-#sidebar .mm-current .mm-list > li {
-	width: 100%;
+/* Offcanvas mobile nav dropdown handling */
+.offcanvas .mod-menu__sub,
+.offcanvas .dropdown-menu {
+	position: static;
+	float: none;
+	border: none;
+	box-shadow: none;
+	padding-left: 15px;
+	display: block;
+	list-style: none;
 }
 @media (max-width: 991px) {
   .caret {
@@ -491,11 +496,12 @@ a.go-top {
 		padding:20px;
 		overflow:hidden;
 	}
-.joostrapmenu > li {
-float: none;
-border: 0;
-background: none;
-padding: 0;
-border-top: 1px solid #ddd;
+	.joostrapmenu > li {
+		float: none;
+		border: 0;
+		background: none;
+		padding: 0;
+		border-top: 1px solid #ddd;
+	}
 }
 /* end - joostrap menu module for secondary menu usage - styling at breakpoint  */

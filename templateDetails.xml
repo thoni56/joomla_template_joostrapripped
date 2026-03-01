@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.1" type="template" client="site">
+<extension type="template" client="site" method="upgrade">
 	<name>joostrapripped</name>
 	<creationDate>10 March 2015</creationDate>
 	<author>Joostrap</author>
 	<authorEmail>phil@joostrap.com</authorEmail>
 	<authorUrl>http://www.joostrap.com</authorUrl>
 	<copyright>Copyright (C) 2005 - 2014 Joostrap. All rights reserved.</copyright>
-	<version>1.0.0</version>
-	<description><![CDATA[ <h2>Joostrap Ripped Template v1.0.0 - Including Bootstrap v3 Awesomeness</h2>]]></description>
+	<version>2.0.0</version>
+	<description><![CDATA[ <h2>Joostrap Ripped Template v2.0.0 - Joomla 5/6 with Bootstrap 5</h2>]]></description>
 	<files>
 		<filename>component.php</filename>
 		<filename>error.php</filename>
@@ -22,11 +22,8 @@
 		<folder>html</folder>
 		<folder>images</folder>
 		<folder>img</folder>
-		<folder>includes</folder>
 		<folder>js</folder>
 		<folder>language</folder>
-		<folder>less</folder>
-		<folder>libraries</folder>
 	</files>
 	<positions>
 		<position>search</position>
@@ -54,61 +51,6 @@
 	<config>
 		<fields name="params">
 
-			<fieldset name="JOOSTRAPRIPPED_LOGOAREA" addfieldpath="/templates/joostrapripped/admin/elements">
-				<field name="logoFile" class="" type="media" default="" label="TPL_JOOSTRAPRIPPED_LOGO_LABEL" description="TPL_JOOSTRAPRIPPED_LOGO_DESC" />
-				<field name="logoMarginTop" type="text" class="input-small" default="60" label="TPL_JOOSTRAPRIPPED_LOGOMARGIN_TOP_LABEL" description="TPL_JOOSTRAPRIPPED_LOGOMARGIN_TOP_DESC" />
-				<field name="logoMarginBottom" type="text" class="input-small" default="55" label="TPL_JOOSTRAPRIPPED_LOGOMARGIN_BOTTOM_LABEL" description="TPL_JOOSTRAPRIPPED_LOGOMARGIN_BOTTOM_DESC" />
-				<field name="sitetitle"  class="" type="text" default="" label="TPL_JOOSTRAPRIPPED_TEMPLATETITLE_LABEL" description="JFIELD_ALT_PAGE_TITLE_LABEL" filter="string" />
-				<field name="sitedescription"  class="" type="text" default="" label="TPL_JOOSTRAPRIPPED_TEMPLATE_DESC_LABEL" description="JGLOBAL_SUBHEADING_DESC" filter="string" />
-				<field
-					name="css_style"
-					type="tplasset"
-					asset="admin/style.css"
-				/>
-				<field
-					name="js_color"
-					type="tplasset"
-					asset="admin/color.js"
-				/>
-			</fieldset>
-			<fieldset name="JOOSTRAPRIPPED_FONTS">
-				<field name="googleFonts" type="radio" class="btn-group" default="0" label="TPL_JOOSTRAPRIPPED_GFONTS_LABEL" description="TPL_JOOSTRAPRIPPED_GFONTS_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="googleFontName" type="text" class="" default="" label="TPL_JOOSTRAPRIPPED_FONT_NAME_LABEL" description="TPL_JOOSTRAPRIPPED_FONT_NAME_DESC" />
-				<field name="googleFontSelectors" type="textarea" class="" default="" label="TPL_JOOSTRAPRIPPED_GFONTS_SELECTORS_LABEL" description="TPL_JOOSTRAPRIPPED_GFONTS_SELECTORS_DESC" rows="4" columns="30" filter="raw" />
-				<field name="googleFontsSecond" type="radio" class="btn-group" default="0" label="TPL_JOOSTRAPRIPPED_GFONTS_LABEL" description="TPL_JOOSTRAPRIPPED_GFONTS_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="googleFontNameSecond" type="text" class="" default="" label="TPL_JOOSTRAPRIPPED_FONT_NAME_LABEL" description="TPL_JOOSTRAPRIPPED_FONT_NAME_DESC" />
-				<field name="googleFontSelectorsSecond" type="textarea" class="" default="" label="TPL_JOOSTRAPRIPPED_GFONTS_SELECTORS_LABEL" description="TPL_JOOSTRAPRIPPED_GFONTS_SELECTORS_DESC" rows="4" columns="30" filter="raw" />
-			</fieldset>
-			<fieldset name="JOOSTRAPRIPPED_MODULES">
-				<field name="sidebarLeftWidth" type="list" default="4" label="Left Sidebar (Width)" description="TPL_JOOSTRAPRIPPED_SIDEBAR_LEFT_WIDTH_DESC">
-					<option value="2">TPL_JOOSTRAPRIPPED_OPTION_SIDEBAR_LEFT_SPAN2</option>
-					<option value="3">TPL_JOOSTRAPRIPPED_OPTION_SIDEBAR_LEFT_SPAN3</option>
-					<option value="4">TPL_JOOSTRAPRIPPED_OPTION_SIDEBAR_LEFT_SPAN4</option>
-					<option value="5">TPL_JOOSTRAPRIPPED_OPTION_SIDEBAR_LEFT_SPAN5</option>
-				</field>
-				<field name="sidebarRightWidth" type="list" default="4" label="Right Sidebar (Width)" description="TPL_JOOSTRAPRIPPED_SIDEBAR_RIGHT_WIDTH_DESC">
-					<option value="2">TPL_JOOSTRAPRIPPED_OPTION_SIDEBAR_RIGHT_SPAN2</option>
-					<option value="3">TPL_JOOSTRAPRIPPED_OPTION_SIDEBAR_RIGHT_SPAN3</option>
-					<option value="4">TPL_JOOSTRAPRIPPED_OPTION_SIDEBAR_RIGHT_SPAN4</option>
-					<option value="5">TPL_JOOSTRAPRIPPED_OPTION_SIDEBAR_RIGHT_SPAN5</option>
-					<option value="6">TPL_JOOSTRAPRIPPED_OPTION_SIDEBAR_RIGHT_SPAN6</option>
-				</field>
-				<field
-					name="bodyclass"
-					class=""
-					type="text"
-					default=""
-					label="TPL_JOOSTRAPRIPPED_BODYCLASS_LABEL"
-					description="TPL_JOOSTRAPRIPPED_BODYCLASS_DESC"
-					filter="string"
-				/>
-			</fieldset>
 			<fieldset name="JOOSTRAPRIPPED_LOGOAREA" addfieldpath="/templates/joostrapripped/fields">
 				<field
 					name="logoFile"
@@ -152,17 +94,8 @@
 					description="JGLOBAL_SUBHEADING_DESC"
 					filter="string"
 				/>
-				<field
-					name="css_style"
-					type="tplasset"
-					asset="admin/style.css"
-				/>
-				<field
-					name="js_color"
-					type="tplasset"
-					asset="admin/color.js"
-				/>
 			</fieldset>
+
 			<fieldset name="JOOSTRAPRIPPED_MODULES">
 				<field
 					name="sidebarLeftWidth"
@@ -198,7 +131,6 @@
 					description="TPL_JOOSTRAPRIPPED_BODYCLASS_DESC"
 					filter="string"
 				/>
-
 			</fieldset>
 
 			<fieldset name="JOOSTRAPRIPPED_OFFCANVASS">
@@ -208,14 +140,12 @@
 					name="menuslide"
 					type="radio"
 					class="btn-group"
-					default="1"
+					default="start"
 					label="TPL_JOOSTRAPRIPPED_MENUSLIDE_LABEL"
 					description="TPL_JOOSTRAPRIPPED_MENUSLIDE_DESC"
 					>
-						<option value="left">Left</option>
-						<option value="right">Right</option>
-						<option value="top">Top</option>
-						<option value="bottom">Bottom</option>
+						<option value="start">Start (Left)</option>
+						<option value="end">End (Right)</option>
 				</field>
 				<field
 					name="icon1"
@@ -408,6 +338,7 @@
 					description="TPL_JOOSTRAPRIPPED_COLOR_PROPERTY_DESC"
 				/>
 			</fieldset>
+
 			<fieldset name="JOOSTRAPRIPPED_FONTS">
 				<field
 					name="googleFonts"
@@ -475,7 +406,7 @@
 				<field
 					name="setGeneratorTag"
 					type="text"
-					default="Joomla 3.1 - Joostrap 3.0 with Bootstrap 3"
+					default="Joomla 5 - Joostrap with Bootstrap 5"
 					label="TPL_JOOSTRAPRIPPED_CUSTOMIZE_METATAG_OUTPUT_LABEL"
 					description="TPL_JOOSTRAPRIPPED_CUSTOMIZE_METATAG_OUTPUT_DESC"
 					size="80"
@@ -559,39 +490,6 @@
 					default="1"
 					label="TPL_JOOSTRAPRIPPED_FONTAWESOMECSS_LABEL"
 					description="TPL_JOOSTRAPRIPPED_FONTAWESOMECSS_DESC"
-					>
-						<option value="1">JYES</option>
-						<option value="0">JNO</option>
-				</field>
-				<field
-					name="loadJquery"
-					type="list"
-					default="1"
-					label="TPL_JOOSTRAPRIPPED_FIELD_LOAD_JQUERY_LABEL"
-					description="TPL_JOOSTRAPRIPPED_FIELD_LOAD_JQUERY_DESC"
-					>
-						<option value="0">TPL_JOOSTRAPRIPPED_LOAD_JQUERY_NOT</option>
-						<option value="1">TPL_JOOSTRAPRIPPED_LOAD_JQUERY_LOCALLY</option>
-						<option value="2">TPL_JOOSTRAPRIPPED_LOAD_JQUERY_CDN</option>
-				</field>
-				<field
-					name="loadBootstrap"
-					type="list"
-					default="1"
-					label="TPL_JOOSTRAPRIPPED_FIELD_LOAD_BOOTSTRAP_LABEL"
-					description="TPL_JOOSTRAPRIPPED_FIELD_LOAD_BOOTSTRAP_DESC"
-					>
-						<option value="0">TPL_JOOSTRAPRIPPED_LOAD_BOOTSTRAP_NOT</option>
-						<option value="1">TPL_JOOSTRAPRIPPED_LOAD_BOOTSTRAP_LOCALLY</option>
-						<option value="2">TPL_JOOSTRAPRIPPED_LOAD_BOOTSTRAP_CDN</option>
-				</field>
-				<field
-					name="allowCompile"
-					type="radio"
-					class="btn-group"
-					default="0"
-					label="TPL_JOOSTRAPRIPPED_FIELD_ALLOW_LESS_COMPILE_LABEL"
-					description="TPL_JOOSTRAPRIPPED_FIELD_ALLOW_LESS_COMPILE_DESC"
 					>
 						<option value="1">JYES</option>
 						<option value="0">JNO</option>
