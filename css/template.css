@@ -1019,10 +1019,6 @@ p.img_caption {
         margin-top: -20px;
 }
 
-.items-row {
-        margin-bottom: 30px;
-}
-
 .blog .cat-children h3 {
         font-size: 24px;
 }
@@ -3039,4 +3035,110 @@ div#slider p {
         .sequence .text-block.bottom {
                 display: none
         }
+}
+
+/* ============================================================
+ * Joostrapripped: template-level overrides (moved here from
+ * custom.css so custom.css is reserved for per-site overrides).
+ * Append-only — these were previously loaded after template.css
+ * via custom.css, so keeping them at the end preserves cascade.
+ * ============================================================ */
+
+body {
+    color: #333;
+    font-weight: 400;
+}
+
+h4 {
+    font-weight: 500;
+}
+
+p.readmore a {
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 6px 12px;
+}
+
+a {
+    color: #800;
+}
+
+/* Legacy J3 .menu class — likely no-ops on J5+ (which emits .mod-menu / .nav).
+   Kept for now; safe to prune after verifying. */
+#menu .menu a, .menu separator {
+    color: white;
+}
+
+#menu .nav-child a, .nav-child separator {
+    color: #333;
+}
+
+.menu a, .menu separator {
+    color: #333;
+}
+
+.dropdown-menu > li.active > a,
+.dropdown-menu > li.active > a:hover,
+.dropdown-menu > li.active > a:focus {
+    background-color: #eee;
+}
+
+.icon-search:before {
+    content: "\f002";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    line-height: 1;
+}
+
+#searchForm fieldset {
+    margin-top: 20px;
+}
+
+#searchForm fieldset legend {
+    margin: 0;
+}
+
+/*
+ * Category blog: multi-column support.
+ * Joomla 4+ core blog.php emits <div class="blog-items columns-N">
+ * (or "masonry-N" depending on the Multi Column Order setting). Core
+ * ships no styling for those classes, so without this the "# Columns"
+ * menu option silently does nothing in this template.
+ */
+.blog-items {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    margin: 0 0 1em;
+}
+
+@media (min-width: 992px) {
+    .blog-items.columns-2 { grid-template-columns: repeat(2, 1fr); }
+    .blog-items.columns-3 { grid-template-columns: repeat(3, 1fr); }
+    .blog-items.columns-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+.blog-items[class*="masonry-"] {
+    display: block;
+    column-gap: 1em;
+}
+
+.blog-items[class*="masonry-"] .blog-item {
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 1em;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+@media (min-width: 992px) {
+    .blog-items.masonry-2 { column-count: 2; }
+    .blog-items.masonry-3 { column-count: 3; }
+    .blog-items.masonry-4 { column-count: 4; }
 }
