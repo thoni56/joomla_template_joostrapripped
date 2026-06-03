@@ -9,6 +9,7 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
+use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Multilanguage;
 use Joomla\CMS\Uri\Uri;
 
@@ -121,9 +122,20 @@ if ($active !== null)
 $loggedin = ($user === null || $user->guest) ? 'loggedout' : 'loggedin';
 
 // Favicon
-if ($this->params->get('templateFavicon'))
+$faviconParam = $this->params->get('templateFavicon');
+if ($faviconParam)
 {
-	$this->addFavicon(Uri::root() . $this->params->get('templateFavicon'));
+	// J4 media field appends a #joomlaImage://...?width=...&height=... fragment; strip it.
+	$cleaned    = HTMLHelper::cleanImageURL($faviconParam);
+	$faviconExt = strtolower(pathinfo($cleaned->url, PATHINFO_EXTENSION));
+	$faviconMime = [
+		'png' => 'image/png',
+		'svg' => 'image/svg+xml',
+		'gif' => 'image/gif',
+		'jpg' => 'image/jpeg',
+		'jpeg' => 'image/jpeg',
+	][$faviconExt] ?? 'image/vnd.microsoft.icon';
+	$this->addFavicon(Uri::root() . $cleaned->url, $faviconMime);
 }
 
 // Logo
