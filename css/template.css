@@ -2124,7 +2124,7 @@ pre {
 #bottom2 {
         padding-top: 12px;
         font-size: 11px;
-        color: #c7c7c7;
+        color: #fff;
 }
 
 #bottom2 a {
@@ -2132,7 +2132,7 @@ pre {
 }
 
 #bottom2 a:hover {
-        color: #fff;
+        color: #ddd;
 }
 
 #bottom2 h2 {
@@ -2142,8 +2142,10 @@ pre {
 }
 
 #bottom2 {
-        background: #383838;
+    background: #383838;
 }
+#bottom2 :is(h1, h2, h3, h4, h5, h6) { color: inherit; }
+#bottom2 .mod-menu { flex-direction: column; }
 
 #bottom2 .module-title {
         border: 0;

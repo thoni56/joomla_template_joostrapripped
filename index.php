@@ -27,7 +27,7 @@ $wa->registerAndUseStyle('joomla.fontawesome', 'system/joomla-fontawesome.css');
 
 // Load template CSS assets (versioned for cache busting)
 // registerAndUseStyle signature: (name, uri, options[], attributes[], dependencies[])
-$assetVersion = ['version' => '2.0.8'];
+$assetVersion = ['version' => '2.0.9'];
 $wa->registerAndUseStyle('tpl.animate', $tplUrl . '/css/animate.css', $assetVersion);
 $wa->registerAndUseStyle('tpl.template', $tplUrl . '/css/template.css', $assetVersion);
 $wa->registerAndUseStyle('tpl.backbone', $tplUrl . '/css/j-backbone.css', $assetVersion);
@@ -201,7 +201,9 @@ $wa->addInlineStyle('
     <?php if ($this->countModules('footer')): ?>
         <div id="bottom2" class="clearfix">
             <div class="container">
-                <jdoc:include type="modules" name="footer" style="standard" />
+                <div class="row">
+                    <jdoc:include type="modules" name="footer" style="html5" />
+                </div>
             </div>
         </div>
     <?php endif; ?>
