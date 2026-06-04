@@ -112,7 +112,6 @@ ul li.dropdown-submenu .caret {
 .nav>li span.separator {
 	display: block;
 	padding: 15px;
-	line-height:20px;
 }
 /* Offcanvas mobile nav dropdown handling */
 .offcanvas .mod-menu__sub,
