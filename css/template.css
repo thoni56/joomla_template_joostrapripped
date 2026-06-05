@@ -1778,8 +1778,8 @@ div.modulepositions div.row div.col-md-3.sidebar {
 }
 
 body {
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 18px;
+        line-height: 1.5;
         color: #808080;
         background-color: #fff;
         z-index: 0;
