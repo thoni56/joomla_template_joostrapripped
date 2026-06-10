@@ -896,6 +896,16 @@ dd span.icon-time {
 
 }
 
+div.com-tags__items li.list-group-item {
+    display: inline-block;
+}
+
+nav.pagenavigation span.pagination {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .img-intro-left img,
 .img-intro-right img,
 .img-intro-none img,
