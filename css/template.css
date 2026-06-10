@@ -71,7 +71,8 @@ ul.social-icons li.icon_googleplus a:hover { background-position: -240px 0; }
         position: relative;
 }
 
-.module ul {
+.module ul.nav,
+.module ul.mod-menu {
         list-style-type: none;
 }
 
