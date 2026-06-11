@@ -1,0 +1,61 @@
+name: Package and release the template
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      ZIP_BASENAME: tpl_joostrapripped
+      TAG_NAME: ${{ github.ref_name }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Fetch main branch
+        run: git fetch origin main:main
+
+      - name: Check branch is main
+        run: |
+          if ! git merge-base --is-ancestor ${{ github.sha }} origin/main; then
+            echo "This tag is not on the main branch. Exiting."
+            exit 78
+          fi
+
+      - name: Prerequisites
+        run: sudo apt-get install -y xmlstarlet
+
+      - name: Check version consistency
+        run: |
+          VERSION_FROM_XML=$(xmlstarlet sel -t -v "/extension/version" template/templateDetails.xml)
+          GIT_TAG="${GITHUB_REF#refs/tags/}"
+          if [ "v$VERSION_FROM_XML" != "$GIT_TAG" ]; then
+            echo "ERROR: Version in templateDetails.xml ($VERSION_FROM_XML) does not match the Git tag ($GIT_TAG)."
+            exit 1
+          fi
+
+      - name: Package the template
+        run: |
+          cd template
+          zip -r ../${ZIP_BASENAME}-${TAG_NAME}.zip . -x '*~'
+
+      - name: Create Release with asset
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: ${{ env.ZIP_BASENAME }}-${{ env.TAG_NAME }}.zip
+
+      - name: Update manifest
+        run: |
+          VERSION_FROM_XML=$(xmlstarlet sel -t -v "/extension/version" template/templateDetails.xml)
+          xmlstarlet ed --inplace \
+            -u "/updates/update/version" -v "$VERSION_FROM_XML" \
+            -u "/updates/update/downloads/downloadurl" -v "https://github.com/thoni56/joomla_template_joostrapripped/releases/download/v${VERSION_FROM_XML}/tpl_joostrapripped-v${VERSION_FROM_XML}.zip" \
+            tpl_joostrapripped-update.xml
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -am "Update manifest with latest version"
+          git push origin HEAD:main
