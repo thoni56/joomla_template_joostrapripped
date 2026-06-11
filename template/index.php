@@ -25,9 +25,9 @@ $wa->useStyle('bootstrap.css');
 $wa->useStyle('fontawesome');
 $wa->registerAndUseStyle('joomla.fontawesome', 'system/joomla-fontawesome.css');
 
-// Load template CSS assets (versioned for cache busting)
+// Load template CSS assets (cache-busted by the manifest version)
 // registerAndUseStyle signature: (name, uri, options[], attributes[], dependencies[])
-$assetVersion = ['version' => '2.0.12'];
+$assetVersion = ['version' => (string) simplexml_load_file($tplPath . '/templateDetails.xml')->version];
 $wa->registerAndUseStyle('tpl.animate', $tplUrl . '/css/animate.css', $assetVersion);
 $wa->registerAndUseStyle('tpl.template', $tplUrl . '/css/template.css', $assetVersion);
 $wa->registerAndUseStyle('tpl.backbone', $tplUrl . '/css/j-backbone.css', $assetVersion);
