@@ -58,6 +58,10 @@ jobs:
             -u "/updates/update/version" -v "$VERSION_FROM_XML" \
             -u "/updates/update/downloads/downloadurl" -v "https://github.com/thoni56/joomla_template_joostrapripped/releases/download/v${VERSION_FROM_XML}/tpl_joostrapripped-v${VERSION_FROM_XML}.zip" \
             tpl_joostrapripped-update.xml
+          if git diff --quiet tpl_joostrapripped-update.xml; then
+            echo "Manifest already at v$VERSION_FROM_XML — nothing to commit."
+            exit 0
+          fi
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -am "Update manifest with latest version"
