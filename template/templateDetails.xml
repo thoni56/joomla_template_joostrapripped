@@ -6,8 +6,8 @@
 	<authorEmail>phil@joostrap.com</authorEmail>
 	<authorUrl>http://www.joostrap.com</authorUrl>
 	<copyright>Copyright (C) 2005 - 2014 Joostrap. All rights reserved.</copyright>
-	<version>2.1.2</version>
-	<description><![CDATA[ <h2>Joostrap Ripped Template v2.1.2 - Joomla 5/6 with Bootstrap 5</h2>]]></description>
+	<version>2.1.3</version>
+	<description><![CDATA[ <h2>Joostrap Ripped Template v2.1.3 - Joomla 5/6 with Bootstrap 5</h2>]]></description>
 	<files>
 		<filename>component.php</filename>
 		<filename>error.php</filename>
