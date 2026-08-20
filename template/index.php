@@ -47,25 +47,6 @@ $wa->registerAndUseStyle('google.raleway', 'https://fonts.googleapis.com/css?fam
 // Critical inline CSS overrides
 $wa->addInlineStyle('
     header#header { background: #0E1A1D !important; }
-    #menu ul, #menu .nav { display: flex; flex-wrap: wrap; list-style: none; padding-left: 0; margin-bottom: 0; }
-    #menu ul > li, #menu .nav > li { position: relative; }
-    #menu > div > ul > li > a, #menu > ul > li > a, #menu .nav > li > a, #menu .nav-item > a {
-        display: block; padding: 10px 15px; color: #fff !important; text-decoration: none !important;
-        font-family: Raleway, sans-serif; font-weight: 300; font-size: 13px;
-        text-transform: uppercase; letter-spacing: 1px;
-    }
-    #menu > div > ul > li > a:hover, #menu > ul > li > a:hover, #menu .nav > li > a:hover, #menu .nav-item > a:hover { color: #f40 !important; }
-    #menu .mod-menu__sub, #menu .nav-child, #menu .dropdown-menu {
-        position: absolute; top: 100%; left: 0; display: none; min-width: 200px;
-        background: #fff; border: 1px solid rgba(0,0,0,.15);
-        box-shadow: 0 6px 12px rgba(0,0,0,.175);
-        z-index: 10000; padding: 5px 0; list-style: none; margin: 0;
-    }
-    #menu li:hover > .mod-menu__sub, #menu li:hover > .nav-child, #menu .dropdown:hover > .dropdown-menu { display: block; }
-    #menu .mod-menu__sub a, #menu .nav-child a, #menu .dropdown-menu a {
-        display: block; padding: 6px 20px; color: #333 !important; text-decoration: none !important; white-space: nowrap;
-    }
-    #menu .mod-menu__sub a:hover, #menu .nav-child a:hover, #menu .dropdown-menu a:hover { background-color: #f5f5f5; color: #f40 !important; }
     h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; text-decoration: none; }
     h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover { text-decoration: none; }
     #mainbody { padding: 30px 0; }

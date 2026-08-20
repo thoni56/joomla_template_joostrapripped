@@ -1980,7 +1980,7 @@ pre {
         text-decoration: none !important;
         font-family: 'Raleway', sans-serif;
         font-weight: 300;
-        font-size: 13px;
+        font-size: 18px;
         text-transform: uppercase;
         letter-spacing: 1px;
         transition: color 0.2s ease;
@@ -1990,7 +1990,7 @@ pre {
 #menu > ul > li > a:hover,
 #menu .nav > li > a:hover,
 #menu .nav-item > a:hover {
-        color: #d00 !important;
+        color: #f40 !important;
 }
 
 /* Active menu item highlight */
@@ -2041,14 +2041,14 @@ pre {
         color: #333 !important;
         text-decoration: none !important;
         white-space: nowrap;
-        font-size: 13px;
+        font-size: 18px;
 }
 
 #menu .mod-menu__sub a:hover,
 #menu .nav-child a:hover,
 #menu .dropdown-menu a:hover {
         background-color: #f5f5f5;
-        color: #d00 !important;
+        color: #f40 !important;
 }
 
 #user-toolbar {
