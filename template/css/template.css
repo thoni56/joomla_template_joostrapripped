@@ -1999,10 +1999,15 @@ pre {
         color: #d00 !important;
 }
 
-/* Submenus: hide by default, show on hover */
+/* Submenus: hide by default, show on hover.
+   font-size is set here, not just on the links: Joomla emits every sub-level as
+   <ul class="mod-menu__sub list-unstyled small"> and Bootstrap's .small is a
+   relative .875em, so it compounds with depth (15.75px, 13.8px, 12.1px...).
+   An absolute size on the list stops that for links and non-link items alike. */
 #menu .mod-menu__sub,
 #menu .nav-child,
 #menu .dropdown-menu {
+        font-size: 18px;
         position: absolute;
         top: 100%;
         left: 0;
@@ -2032,16 +2037,43 @@ pre {
         left: 100%;
 }
 
-/* Submenu links */
+/* Submenu items. The "heading" and "separator" menu item types are not links —
+   Joomla renders them as <span class="mod-menu__heading nav-header"> and
+   <span class="mod-menu__separator separator"> — so they need the same box as
+   the links or they sit unindented and inherit the grey body colour. */
+#menu .mod-menu__sub a,
+#menu .mod-menu__sub .nav-header,
+#menu .mod-menu__sub .separator,
+#menu .nav-child a,
+#menu .nav-child .nav-header,
+#menu .nav-child .separator,
+#menu .dropdown-menu a,
+#menu .dropdown-menu .nav-header,
+#menu .dropdown-menu .separator {
+        display: block;
+        padding: 6px 20px;
+        text-decoration: none !important;
+        white-space: nowrap;
+}
+
 #menu .mod-menu__sub a,
 #menu .nav-child a,
 #menu .dropdown-menu a {
-        display: block;
-        padding: 6px 20px;
         color: #333 !important;
-        text-decoration: none !important;
-        white-space: nowrap;
-        font-size: 18px;
+}
+
+/* Non-link items act as group labels: uppercase italic and muted, so they read
+   as headings for the items below rather than as clickable entries */
+#menu .mod-menu__sub .nav-header,
+#menu .mod-menu__sub .separator,
+#menu .nav-child .nav-header,
+#menu .nav-child .separator,
+#menu .dropdown-menu .nav-header,
+#menu .dropdown-menu .separator {
+        color: #888;
+        font-style: italic;
+        text-transform: uppercase;
+        letter-spacing: 1px;
 }
 
 #menu .mod-menu__sub a:hover,
